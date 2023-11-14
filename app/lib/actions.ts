@@ -1,7 +1,7 @@
 "use server"
 
 import { POST } from "../api/route";
-import md5 = require("md5");
+import md5 from "md5"; 
 
 export async function shortenUrl(formData) {
 
