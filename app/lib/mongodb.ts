@@ -1,7 +1,8 @@
 import mongoose from 'mongoose';
 
 mongoose.set("strict", true);
-const uri = process.env.LOCAL_MONGODB_URI;
+
+const uri = process.env.LOCAL_URI;
 
 export default async function connectMongoDB() {
     try {
