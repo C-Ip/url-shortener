@@ -15,14 +15,3 @@ export async function shortenUrl(formData) {
     }
     POST(data);
 }
-
-export async function getUrl(data) {
-    const { urlKey } = data;
-
-    const info = {
-        "urlKey": urlKey
-    }
-
-    const url = GET(info, data);
-    return url;
-}
