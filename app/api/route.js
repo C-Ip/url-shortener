@@ -12,3 +12,8 @@ export async function POST(req) {
 
     }    
 }
+
+export async function GET(req) {
+    await connectMongoDB();
+    const query = await ShortenUrl.findOne({urlKey: urlKey}).exec();
+}

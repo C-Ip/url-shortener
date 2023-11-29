@@ -1,7 +1,6 @@
 "use server"
 
 import { POST } from "../api/route";
-import { GET } from "../[urlKey]/route";
 import md5 from "md5"; 
 
 export async function shortenUrl(formData) {
@@ -14,4 +13,5 @@ export async function shortenUrl(formData) {
         "shortUrl": "http://localhost:3000/" + key
     }
     POST(data);
+    return data.shortUrl;
 }
