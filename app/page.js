@@ -27,7 +27,7 @@ export default function Home() {
     const shortUrl = shortenUrl(event);
     setShortUrl(() => {
       return shortUrl;
-    })
+    });
   }
 
   function handleDelete(event) {
@@ -51,7 +51,7 @@ export default function Home() {
             {shortUrl === "" ? <></> : <p className="px-2 w-auto">Short URL: {shortUrl}</p>}
           </div>
           <div className="form shadow-xl col-end-6 col-span-2">
-            <p className="px-2">Delete a short url that you've created.</p>
+            <p className="px-2">Delete an existing short url.</p>
             <Form
               handleSubmit={handleDelete}
               handleChange={handleDeleteUrl}
