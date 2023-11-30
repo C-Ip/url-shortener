@@ -1,6 +1,6 @@
 "use server"
 
-import { POST } from "../api/route";
+import { POST, DELETE } from "../api/route";
 import md5 from "md5"; 
 
 export async function shortenUrl(formData) {
@@ -14,4 +14,11 @@ export async function shortenUrl(formData) {
     }
     POST(data);
     return data.shortUrl;
+}
+
+export async function deleteRecord(formData) {
+    const data = {
+        "deleteUrl": formData.get("url")
+    }
+    DELETE(data);
 }
